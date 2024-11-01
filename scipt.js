@@ -11,7 +11,7 @@ function registerParticipant(event) {
   event.preventDefault(); // Empêche le rechargement de la page
 
   // Récupérer les données du formulaire
-  const name = document.getElementById("name").value.trim();
+  const name = document.getElementById("name").value;
   const email = document.getElementById("email").value.trim();
 
   // Valider les champs
