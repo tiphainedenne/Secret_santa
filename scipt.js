@@ -7,4 +7,3 @@ document.getElementById("registration-form").addEventListener("submit", function
     // Afficher la section d'idées cadeaux
     document.getElementById("gift-ideas").style.display = "block";
   });
-  
