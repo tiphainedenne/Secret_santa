@@ -1,3 +1,5 @@
+// ############ Connexion ###########
+
 // Stocker les participants et idées cadeaux
 let participants = [];
 
@@ -77,3 +79,41 @@ document.getElementById("registration-form").addEventListener("submit", register
 
 // Écouteur pour le bouton d'enregistrement des idées cadeaux
 document.getElementById("submit-ideas").addEventListener("click", saveGiftIdeas);
+
+
+// ############ Dashboard
+
+// Charger les informations du destinataire après la connexion
+function loadRecipientInfo() {
+    const recipientName = "Alice"; // Exemple : remplacer par le nom aléatoire sélectionné pour l'utilisateur connecté
+    const recipientWishlist = ["Parfum", "Livre", "Écharpe"]; // Exemple : remplacer par la liste d'idées du destinataire
+  
+    document.getElementById("recipient-name").textContent = recipientName;
+    const wishlistElement = document.getElementById("recipient-wishlist");
+  
+    // Ajouter chaque idée cadeau dans la liste
+    recipientWishlist.forEach(idea => {
+      const listItem = document.createElement("li");
+      listItem.textContent = idea;
+      wishlistElement.appendChild(listItem);
+    });
+  }
+
+// Enregistrer la liste d'envies de l'utilisateur
+function saveMyWishlist() {
+    const myWishlist = document.getElementById("my-wishlist").value.trim();
+    
+    if (myWishlist) {
+      // Sauvegarde locale pour cet exemple
+      localStorage.setItem("myWishlist", myWishlist);
+      alert("Votre liste d'envies a été enregistrée !");
+    } else {
+      alert("Veuillez entrer au moins une idée dans votre liste d'envies.");
+    }
+  }
+
+// Appel des fonctions après le chargement de la page
+window.onload = function() {
+    loadRecipientInfo();
+    document.getElementById("save-wishlist").addEventListener("click", saveMyWishlist);
+  };

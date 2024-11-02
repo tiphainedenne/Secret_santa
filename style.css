@@ -1,67 +1,159 @@
-body, html {
+/* Styles généraux pour toutes les pages */
+* {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
-    font-family: Arial, sans-serif;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background-color: #f0f8ff;
+    font-family: Garamond, serif;
   }
   
+  body, html {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #ff865c;
+  }
+  
+  /* Page d'accueil (index.html) */
   .welcome-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     text-align: center;
+    margin-top: 50px;
   }
   
   .welcome-image {
     max-width: 80%;
     height: auto;
     margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   }
   
   .enter-button {
-    padding: 10px 20px;
+    padding: 12px 24px;
     font-size: 18px;
     cursor: pointer;
-    background-color: #4CAF50;
+    background-color: #ff865c;
     color: white;
     border: none;
     border-radius: 5px;
-  }  
-
-body {
-    font-family: Garamond, serif;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 20px;
+    transition: background-color 0.3s;
+  }
+  
+  .enter-button:hover {
     background-color: #ff865c;
   }
   
-  h1 {
+  /* Page de connexion (login.html) */
+  .login-container {
+    margin-top: 100px;
+    width: 100%;
+    max-width: 400px;
+    padding: 20px;
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+  
+  .login-container h2 {
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  .login-container label {
+    display: block;
+    text-align: left;
+    margin: 10px 0 5px;
+    font-weight: bold;
     color: #333;
   }
   
-  form, #gift-ideas {
-    max-width: 300px;
+  .login-container input[type="text"],
+  .login-container input[type="password"],
+  .login-container input[type="email"] {
     width: 100%;
-    margin: 20px;
-  }
-
-  select, input, button {
-    width: 100%; /* Chaque champ prendra 100% de la largeur du formulaire */
     padding: 10px;
-    margin-top: 10px;
-    box-sizing: border-box; /* Inclure le padding dans la largeur totale */
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
   }
   
-  button {
-    cursor: pointer; /* Change le curseur pour indiquer qu'il s'agit d'un bouton cliquable */
+  .login-container button {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    color: white;
+    background-color: #ff865c;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .login-container button:hover {
+    background-color: #ff865c;
+  }
+  
+  /* Tableau de bord (dashboard.html) */
+  .container {
+    display: flex;
+    width: 80%;
+    margin-top: 20px;
+    gap: 20px;
+  }
+  
+  .left-panel, .right-panel {
+    width: 45%;
+    padding: 20px;
+    background-color: #ff865c;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .left-panel h2, .right-panel h2, .wishlist-input h2 {
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+  #wishlist-input {
+    margin-top: 30px;
+    width: 80%;
+    text-align: center;
+  }
+  
+  #wishlist-input h2 {
+    text-align: center;
   }
   
   textarea {
-    width: 100%; /* Pour s'assurer que le champ d'idées cadeaux est également uniforme */
-    padding: 10px;
+    width: 100%;
+    height: 100px;
     margin-top: 10px;
-    box-sizing: border-box;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
   }
+  
+  button {
+    margin-top: 10px;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: white;
+    background-color: #ff865c;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  button:hover {
+    background-color: #ff865c;
+  }
+  
