@@ -3,46 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Secret Santa</title>
+  <title>Secret Santa - Bienvenue</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h1>Bienvenue au Secret Santa de la famille !</h1>
-
-  <!-- Formulaire d'inscription/connexion -->
-  <form id="login-form">
-    <label for="name">Nom :</label>
-    <br>
-    <select id="name" required>
-      <option value="">-- Sélectionnez votre nom --</option>
-      <option value="Alicia">Alicia</option>
-      <option value="Anne-Charlotte">Anne-Charlotte</option>
-      <option value="Delphine">Delphine</option>
-      <option value="Hugo">Hugo</option>
-      <option value="Jean-François">Jean-François</option>
-      <option value="Léo">Léo</option>
-      <option value="Nicollin">Nicollin</option>
-      <option value="Patricia">Patricia</option>
-      <option value="Pierre">Pierre</option>
-      <option value="Tiphaine">Tiphaine</option>
-    </select>
-
-    <br>
-    <br>
-    
-    <label for="password">Mot de passe :</label>
-    <input type="password" id="password" required>
-    
-    <button type="submit" id="connect-button">Se connecter</button>
-  </form>
-
-  <!-- Section pour les idées cadeaux (invisible par défaut) -->
-  <div id="gift-ideas" style="display: none;">
-    <h2>Vos idées cadeaux</h2>
-    <textarea id="ideas" placeholder="Entrez vos idées..."></textarea>
-    <button id="submit-ideas">Enregistrer</button>
+  <div class="welcome-container">
+    <img src="pere_noel.jpg" alt="Photo de Noël" class="welcome-image">
+    <button onclick="window.location.href='login.html'" class="enter-button">Accéder au site</button>
   </div>
-
-  <script src="script.js"></script>
 </body>
 </html>
