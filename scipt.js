@@ -6,31 +6,54 @@ function toggleVisibility(elementId, shouldShow) {
   document.getElementById(elementId).style.display = shouldShow ? "block" : "none";
 }
 
-// Fonction pour enregistrer un participant
-function registerParticipant(event) {
-  event.preventDefault(); // Empêche le rechargement de la page
-
-  // Récupérer les données du formulaire
-  const name = document.getElementById("name").value;
-  const email = document.getElementById("email").value.trim();
-
-  // Valider les champs
-  if (!name || !email) {
-    alert("Veuillez remplir tous les champs.");
-    return;
+// Vérifier si l'utilisateur a un mot de passe enregistré
+function checkIfPasswordExists(name) {
+    return localStorage.getItem(name) !== null;
   }
 
-  // Ajouter le participant à la liste
-  participants.push({ name, email, ideas: "" });
-  console.log("Participants :", participants);
+// Enregistrer un nouveau mot de passe
+function savePassword(name, password) {
+    localStorage.setItem(name, password);
+  }
+  
+  // Vérifier le mot de passe lors de la connexion
+  function validatePassword(name, enteredPassword) {
+    const storedPassword = localStorage.getItem(name);
+    return storedPassword === enteredPassword;
+  }
 
-  // Afficher la section d'idées cadeaux
-  toggleVisibility("gift-ideas", true);
-
-  // Réinitialiser le formulaire et masquer
-  document.getElementById("registration-form").reset();
-  toggleVisibility("registration-form", false); // On masque le formulaire après inscription
-}
+// Gérer la connexion
+function handleLogin(event) {
+    event.preventDefault();
+  
+    const name = document.getElementById("name").value;
+    const password = document.getElementById("password").value;
+  
+    if (!name || !password) {
+      alert("Veuillez remplir tous les champs.");
+      return;
+    }
+  
+    if (checkIfPasswordExists(name)) {
+      // Si le mot de passe existe déjà, on vérifie
+      if (validatePassword(name, password)) {
+        alert("Connexion réussie !");
+        toggleVisibility("gift-ideas", true);
+        toggleVisibility("login-form", false);
+      } else {
+        alert("Mot de passe incorrect.");
+      }
+    } else {
+      // Si c'est la première connexion, on enregistre le mot de passe
+      savePassword(name, password);
+      alert("Mot de passe créé avec succès !");
+      toggleVisibility("gift-ideas", true);
+      toggleVisibility("login-form", false);
+    }
+  
+    // Réinitialiser le champ mot de passe
+    document.getElementById("password").value = "";
+  }
 
 // Fonction pour enregistrer les idées cadeaux
 function saveGiftIdeas() {

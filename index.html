@@ -9,8 +9,8 @@
 <body>
   <h1>Bienvenue au Secret Santa de la famille !</h1>
 
-  <!-- Formulaire d'inscription -->
-  <form id="registration-form">
+  <!-- Formulaire d'inscription/connexion -->
+  <form id="login-form">
     <label for="name">Nom :</label>
     <br>
     <select id="name" required>
@@ -29,10 +29,10 @@
 
     <br>
     
-    <label for="email">Email :</label>
-    <input type="email" id="email" required>
+    <label for="password">Mot de passe :</label>
+    <input type="password" id="password" required>
     
-    <button type="submit">Participer</button>
+    <button type="submit" id="connect-button">Se connecter</button>
   </form>
 
   <!-- Section pour les idées cadeaux (invisible par défaut) -->
