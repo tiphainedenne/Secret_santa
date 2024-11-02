@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Tableau de Bord Secret Santa</title>
+  <title>Tableau de Bord - Secret Santa</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -11,13 +11,14 @@
     <!-- Section gauche : Nom de la personne tirée au sort -->
     <div class="left-panel">
       <h2>Vous offrez un cadeau à :</h2>
-      <p id="recipient-name">Nom de la personne tirée</p>
+      <p id="recipient-name">Nom de la personne tirée</p>      <!-- TODO:rendre aléatoire -->
     </div>
 
     <!-- Section droite : Liste d'envies de la personne tirée au sort -->
     <div class="right-panel">
       <h2>Liste d'envies :</h2>
       <ul id="recipient-wishlist">
+        <!-- TODO: mettre un texte plutôt que la liste -->
         <li>Idée cadeau 1</li>
         <li>Idée cadeau 2</li>
         <li>Idée cadeau 3</li>
@@ -30,6 +31,7 @@
   <div class="wishlist-input">
     <h2>Ma liste d'envies</h2>
     <textarea id="my-wishlist" placeholder="Écrivez ici vos idées d'envies..."></textarea>
+    <!-- TODO: changer pour enregistrer dans la base de données -->
     <button id="save-wishlist">Enregistrer ma liste d'envies</button>
   </div>
 

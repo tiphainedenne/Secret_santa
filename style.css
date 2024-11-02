@@ -73,8 +73,7 @@
   }
   
   .login-container input[type="text"],
-  .login-container input[type="password"],
-  .login-container input[type="email"] {
+  .login-container input[type="password"] {
     width: 100%;
     padding: 10px;
     margin-bottom: 20px;
@@ -116,10 +115,10 @@
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   }
   
-  .left-panel h2, .right-panel h2, .wishlist-input h2 {
+  /* .left-panel h2, .right-panel h2, .wishlist-input h2 {
     color: #333;
     margin-bottom: 10px;
-  }
+  } */
   
   #wishlist-input {
     margin-top: 30px;
@@ -127,9 +126,9 @@
     text-align: center;
   }
   
-  #wishlist-input h2 {
+  /* #wishlist-input h2 {
     text-align: center;
-  }
+  } */
   
   textarea {
     width: 100%;
