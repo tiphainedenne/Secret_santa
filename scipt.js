@@ -1,5 +1,7 @@
 // Gestion de la connexion
-function handleLogin() {
+function handleLogin(event) {
+    event.preventDefault(); // Empêche le rechargement de la page
+    
     const username = document.getElementById("username").value;
     const password = document.getElementById("password").value;
   
