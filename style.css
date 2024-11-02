@@ -17,9 +17,20 @@ body {
     margin: 20px;
   }
   
-  input, textarea, button {
-    width: 100%;
+  select, input, button {
+    width: 100%; /* Chaque champ prendra 100% de la largeur du formulaire */
     padding: 10px;
     margin-top: 10px;
+    box-sizing: border-box; /* Inclure le padding dans la largeur totale */
   }
   
+  button {
+    cursor: pointer; /* Change le curseur pour indiquer qu'il s'agit d'un bouton cliquable */
+  }
+  
+  textarea {
+    width: 100%; /* Pour s'assurer que le champ d'idées cadeaux est également uniforme */
+    padding: 10px;
+    margin-top: 10px;
+    box-sizing: border-box;
+  }
