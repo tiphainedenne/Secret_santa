@@ -117,3 +117,17 @@ window.onload = function() {
     loadRecipientInfo();
     document.getElementById("save-wishlist").addEventListener("click", saveMyWishlist);
   };
+
+  function handleLogin() {
+    const username = document.getElementById("username").value;
+    const password = document.getElementById("password").value;
+  
+    // Vérification d'un mot de passe, par exemple
+    if (username && password) {
+      // Code de validation du mot de passe
+      // S'il est correct, rediriger vers la page de tableau de bord
+      window.location.href = "dashboard.html";
+    } else {
+      alert("Veuillez entrer votre nom d'utilisateur et votre mot de passe.");
+    }
+  }
