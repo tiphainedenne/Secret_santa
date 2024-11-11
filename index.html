@@ -4,12 +4,50 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Secret Santa - welcome</title>
+  <script type="module">
+    // Import the functions you need from the SDKs you need
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-app.js";
+    import { getAnalytics } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-analytics.js";
+    // TODO: Add SDKs for Firebase products that you want to use
+    // https://firebase.google.com/docs/web/setup#available-libraries
+  
+    // Your web app's Firebase configuration
+    // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+    const firebaseConfig = {
+      apiKey: "AIzaSyDniQIpZztVlcUI9seCknpxpYZ7e6HaWDw",
+      authDomain: "secret-santa-375d8.firebaseapp.com",
+      projectId: "secret-santa-375d8",
+      storageBucket: "secret-santa-375d8.firebasestorage.app",
+      messagingSenderId: "1033198731102",
+      appId: "1:1033198731102:web:fffdbe10f4bda1ee7a19cf",
+      measurementId: "G-ZJ1H6LR865"
+    };
+  
+    // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+    const analytics = getAnalytics(app);
+  </script>
+  
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <div class="welcome-container">
+    <h1>Bienvenue au Secret Santa de la famille !</h1>
     <img src="pere_noel.jpg" alt="Photo de Noël" class="welcome-image">
-    <button onclick="window.location.href='login.html'" class="enter-button">Accéder au site</button>
+    <select id="nameDropdown">
+      <option value="">-- Sélectionnez votre prénom --</option>
+      <option value="Alicia">Alicia</option>
+      <option value="Anne-Charlotte">Anne-Charlotte</option>
+      <option value="Delphine">Delphine</option>
+      <option value="Hugo">Hugo</option>
+      <option value="Jean-François">Jean-François</option>
+      <option value="Léo">Léo</option>
+      <option value="Nicollin">Nicollin</option>
+      <option value="Patricia">Patricia</option>
+      <option value="Pierre">Pierre</option>
+      <option value="Tiphaine">Tiphaine</option>    
+    </select>
+    <button onclick="confirmName()">OK</button>
   </div>
 </body>
 </html>

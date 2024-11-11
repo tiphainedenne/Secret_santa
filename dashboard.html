@@ -1,40 +1,27 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Tableau de Bord - Secret Santa</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Secret Santa - Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <div class="container">
-    <!-- Section gauche : Nom de la personne tirée au sort -->
-    <div class="left-panel">
-      <h2>Vous offrez un cadeau à :</h2>
-      <p id="recipient-name">Nom de la personne tirée</p>      <!-- TODO:rendre aléatoire -->
+    <div class="dashboard-container">
+        <div class="selected-person">
+            <img id="personImage" src="path_to_person_image.jpg" alt="Person Image">
+            <h2 id="personName">Nom de la personne tirée au sort</h2>
+        </div>
+        <div class="wishlist">
+            <h3>Liste de souhaits</h3>
+            <p id="wishlistContent">...</p>
+        </div>
+        <button onclick="openWishlistInput()">Ma liste de souhaits</button>
+        <div id="wishlistInputModal" class="modal">
+            <textarea id="wishlistInput" placeholder="Inscrivez votre liste de souhaits ici..."></textarea>
+            <button onclick="saveWishlist()">Enregistrer</button>
+        </div>
     </div>
-
-    <!-- Section droite : Liste d'envies de la personne tirée au sort -->
-    <div class="right-panel">
-      <h2>Liste d'envies :</h2>
-      <ul id="recipient-wishlist">
-        <!-- TODO: mettre un texte plutôt que la liste -->
-        <li>Idée cadeau 1</li>
-        <li>Idée cadeau 2</li>
-        <li>Idée cadeau 3</li>
-        <!-- Les idées peuvent être remplies dynamiquement depuis le script.js -->
-      </ul>
-    </div>
-  </div>
-
-  <!-- Section en bas : Champ pour entrer sa propre liste d'envies -->
-  <div class="wishlist-input">
-    <h2>Ma liste d'envies</h2>
-    <textarea id="my-wishlist" placeholder="Écrivez ici vos idées d'envies..."></textarea>
-    <!-- TODO: changer pour enregistrer dans la base de données -->
-    <button id="save-wishlist">Enregistrer ma liste d'envies</button>
-  </div>
-
-  <script src="script.js"></script>
+    <script src="scripts.js"></script>
 </body>
 </html>
