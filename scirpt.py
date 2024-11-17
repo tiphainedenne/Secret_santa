@@ -53,7 +53,7 @@ def add_wishes_list(person: str, wishes: str):
 # function to get wishes list
 def get_wishes_list(person: str):
     # person == celui dont on est sur la page
-    receiver = results[person]
+    receiver = result[person]
     if receiver in dict_wishes.keys():
         return dict_wishes[receiver]
     else:
@@ -64,9 +64,9 @@ def get_wishes_list(person: str):
 
 # Pour connaître celui a qui la personne qui ouvre sa page doit faire un cadeau
 def get_receiver(person: str):
-    return results[person]
+    return result[person]
 
 # Pour avoir le chemin de la photo du receveur
 def get_image(person: str):
-    return "./pictures"+results[person]+".jpg"
+    return "./pictures"+result[person]+".jpg"
 
