@@ -62,5 +62,11 @@ def get_wishes_list(person: str):
 # TODO: faire tourner cette fonction quand quelqu'un se connecte
 # Les phrases à retourner doivent être dans l'encadré liste de souhaits
 
+# Pour connaître celui a qui la personne qui ouvre sa page doit faire un cadeau
 def get_receiver(person: str):
     return results[person]
+
+# Pour avoir le chemin de la photo du receveur
+def get_image(person: str):
+    return "./pictures"+results[person]+".jpg"
+
